@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Sign up Form </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Create an account</h1>
+      <form action="login.html" method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+		  <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Confirm Password</label>
+        </div>
+		<div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Email Address</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"  required />
+          <span></span>
+          <label>Phone Number</label>
+        </div>
+		<input type="submit" value="Create your account">
+		<div class="login_link">
+          Already have an account?   <a href="login.html">  Login</a>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

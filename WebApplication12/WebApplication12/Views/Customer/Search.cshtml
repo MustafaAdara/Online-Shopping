@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebApplication12.Data.Disease>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Search Bar</title>
+    <link href="~/css/searchstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    @using (Html.BeginForm("Search", "Customer", FormMethod.Get))
+    {
+        <div class="container">
+            <div class="searchpart">
+                <div class="search">
+                    @Html.TextBox("search")
+                    <input type="submit" value="search">
+                </div>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="card">
+
+                    <h1>@item.Product.ProductName</h1>
+                    <p class="price">@item.Product.Price</p>
+                    <p class="hospitalName">treatment avaliable in:<span style="color:white">@item.Hospital_Name Hospital</span> </p>
+                    <p><button>Add To Cart</button></p>
+                </div>
+            }
+        </div>
+    }
+</body>
+</html>

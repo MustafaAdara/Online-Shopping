@@ -1,0 +1,74 @@
+﻿@model WebApplication12.Data.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CreateProduct</title>
+    <link href="~/css/StyleLogin.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="center">
+        <h1>Add an item</h1>
+        @using (Html.BeginForm())
+        {
+
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="txt_field">
+
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @type = "text" } })
+                <span></span> @Html.LabelFor(model => model.ProductName)
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="txt_field">
+
+
+                @Html.EditorFor(model => model.ProductType, new { htmlAttributes = new { @type = "text" } })
+                <span></span>
+                @Html.LabelFor(model => model.ProductType)
+                @Html.ValidationMessageFor(model => model.ProductType, "", new { @class = "text-danger" })
+            </div>
+
+
+
+
+            <div class="txt_field">
+
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @type = "text" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                <span></span>
+                @Html.LabelFor(model => model.Price)
+            </div>
+
+
+
+
+            <div class="txt_field">
+
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @type = "text" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                <span></span>
+                @Html.LabelFor(model => model.Description)
+
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" href=@Url.Action("Index","Products") />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+
+                    <a href=@Url.Action("Index","Products")>Back To list </a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

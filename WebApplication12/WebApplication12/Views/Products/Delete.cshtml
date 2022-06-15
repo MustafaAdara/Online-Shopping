@@ -1,0 +1,80 @@
+﻿@model WebApplication12.Data.Product
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+  
+    <link href="~/css/View.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <h1>Remove an item</h1>
+        <hr />
+        <table>
+            <tr>
+
+                <th>
+
+                    @Html.DisplayNameFor(model => model.ProductName)
+
+                </th>
+
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductType)
+                </th>
+
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.image)
+                </th>
+
+            </tr>
+ 
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ProductType)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.image)
+                </td>
+            </tr>
+            </table>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+
+                @Html.ActionLink("Back to List", "Index", "null", new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>
+</body>
+</html>

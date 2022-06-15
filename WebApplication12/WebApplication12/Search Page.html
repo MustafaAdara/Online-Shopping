@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+
+    <title> Add Item Form</title>
+    <!---CHANGE DIRECTORY!!--->
+    <link href="Add.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="center">
+        <h1>Add an item</h1>
+        <form action="adminhomepage.html" method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Item name</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Item ID</label>
+            </div>
+            <div class="txt_field">
+                <input type="number" required>
+                <span></span>
+                <label>Quantity</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Disease Cured</label>
+            </div>
+            <div class="txt_field3">
+                <input type="file" id="img" name="img" accept="image/*" required>
+
+                <span></span>
+                <label>Product Image</label>
+            </div>
+            <input type="submit" value="Add Item">
+            <div class="label">
+                Adding item to Database
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

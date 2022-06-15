@@ -1,0 +1,13 @@
+Function validate()
+{
+	var username=Document.getElementById("Username").nodeValue;
+	var password=Document.getElementById("Password").nodeValue;
+	if(username=="user"&&password=="user")
+	{
+		alert("Login Successful");
+		return false;
+	}
+	else
+	{alert("Please check your username & password");
+	}
+	

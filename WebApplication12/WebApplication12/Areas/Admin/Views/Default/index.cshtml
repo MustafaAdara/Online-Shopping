@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herbs Homepage</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link href="~/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="homepage.html#home" class="logo">Herbs & Fruits<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="homepage.html#home">home</a>
+            <a href="homepage.html#about">about</a>
+            <a href="homepage.html#productsStore">products</a>
+            <a href="homepage.html#review">reviews</a>
+            <a href="homepage.html#contact">contact</a>
+        </nav>
+
+
+    </header>
+    <div class="Add-Item">
+        <a href=@Url.Action("Index","ProductsController")>Add Item</a>
+       
+    </div>
+
+    <div class="remove-item">
+        <a href=@Url.Action("index","Remove Item")>Remove item</a>
+    </div>
+</body>
+</html>

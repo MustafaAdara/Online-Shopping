@@ -1,0 +1,74 @@
+﻿@model WebApplication12.Data.Product
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/StyleLogin.css" rel="stylesheet" />
+    <title>Edit</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="center">
+        <h1>Edit Product</h1>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ProductID)
+
+        <div class="txt_field">
+
+            @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @type = "text" } })
+            <span></span> @Html.LabelFor(model => model.ProductName)
+            @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="txt_field">
+
+
+            @Html.EditorFor(model => model.ProductType, new { htmlAttributes = new { @type = "text" } })
+            <span></span>
+            @Html.LabelFor(model => model.ProductType)
+            @Html.ValidationMessageFor(model => model.ProductType, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="txt_field">
+
+            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @type = "text" } })
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+
+            @Html.LabelFor(model => model.Price)
+        </div>
+
+        <div class="txt_field">
+
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @type = "text" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            <span></span>
+            @Html.LabelFor(model => model.Description)
+
+        </div>
+
+        <div class="txt_field3">
+            <input type="file" id="img" name="img" required>
+
+            <span></span>
+            @Html.LabelFor(model => model.image)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApplication12.Data.Product>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products </title>
+    <link href="~/css/View.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="center">
+        <table>
+            <tr>
+                <th >
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+          
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.image)
+                </th>
+               
+            </tr>
+
+            @foreach (var item in Model)
+            {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image)
+
+                    @*<img href="@Url.Content(item.image)" width="50" height="50" alt="" />*@
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+
+</html>

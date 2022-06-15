@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Search Bar</title>
+    <link rel="stylesheet" href="searchstyle.css">
+	</head>
+	<body>
+	<div class="container">
+	<form action="Home Page/homepage.html" class="searchpage">
+	<input type="text" placeholder="Search by using disease name" name="q">
+	<button type="submit"><img src="Search.png"></button>
+	<div class="hospital">
+          Search Hospitals?   <a href="Search hospital.html">  Click here</a>
+        </div>
+	</form>
+	
+	
+	

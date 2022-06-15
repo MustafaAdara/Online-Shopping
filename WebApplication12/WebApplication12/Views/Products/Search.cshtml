@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApplication12.Data.Disease>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = null;
+}
+<title> Search Bar</title>
+<link rel="stylesheet" href="~/Content/search.css">
+<body>
+    @using (Html.BeginForm("Search", "Products", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="container">
+            <div class="searchpart">
+                <div class="search">
+                    @Html.TextBox("search")
+                    <input type="submit" value="search">
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <img src="@Url.Content(item.Product.image)" style="width:50%">
+                    <h1>@item.Product.ProductName</h1>
+                    <p class="price">@item.Product.Price</p>
+                    <p class="hospitalName">treatment avaliable in:<span style="color:white">@item.Hospital_Name Hospital</span> </p>
+                    <p><button>Add To Cart</button></p>
+                </div>
+            }
+        </div>
+    }
+</body>
+

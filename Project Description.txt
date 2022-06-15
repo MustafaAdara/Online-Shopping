@@ -1,0 +1,16 @@
+This project helps the users in curing its disease by giving the list of fruits and herbs that the user
+should consume in order to get rid of its disease. The main purpose of this project is to help the
+user to easily search for herbs and fruits that will be good for the health of the user depending
+on any health issue or disease that he/she is suffering from. This system helps the user to reduce
+its searching time to a great extent by allowing the user to enter its health problem and search
+accordingly. The admin can add fruits and herbs to the system and its information. This system
+also allows the user to view the selected fruit or the herb’s description which describes how the
+fruit or the herb will help to improve the user’s health. This system also allows the user to place
+order which will add the items to the user’s cart and make payment for the same. The system
+also includes a module in which the user can search for the hospitals depending on the name of
+the disease that it enters. Thus, this system helps to cure the user’s disease to a great extent.
+System can recommended some product to the user. If different user buy other product then
+this product should recommended to other active user.
+Advantages:
+- The system allows placing order for more than one item.
+- The system also helps to search for the hospitals available depending on the disease entered by user

@@ -1,0 +1,40 @@
+﻿@model WebApplication12.Areas.Admin.Models.LoginModel
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Login Form</title>
+    <link href="~/css/StyleLogin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+            <div class="txt_field">
+                @Html.TextBoxFor(m => m.UserName, new { @id = "Username" })
+                <span></span>
+                @Html.LabelFor(m => m.UserName)
+
+            </div>
+            <div class="txt_field">
+                @Html.TextBoxFor(m => m.Password, new { @id = "Password" ,@type = "password" })
+                <span></span>
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="pass"> Forgot your Password? <a href="Forgot your password.html">Reset</a> </div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="sign up.html">Sign up</a>
+            </div>
+            }
+    </div>
+    @if(Model !=null && Model.Massage!=null)
+    {
+        <div class=""signup_link"">
+            @Model.Massage
+        </div>
+    }
+
+</body>
+</html>
